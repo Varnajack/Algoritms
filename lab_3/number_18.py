@@ -1,4 +1,3 @@
-import random
 from random import randint
 
 def my_list(*args):
@@ -10,11 +9,8 @@ def my_list(*args):
             lst.extend(my_list(*elem))
     return lst
 
-
-len_mass = randint(10,10)
-len_elem = randint(10,10)
 a,b = 1,100
-mass = [[random.randint(a,b) for _ in range(len_elem)] for _ in range(len_mass)]
+mass = [[randint(a,b) for _ in range(randint(10,10))] for _ in range(randint(10,10))]
 print("Массив массивов:", mass)
 
 print("Распакованный массив:", my_list(mass))
